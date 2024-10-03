@@ -1,0 +1,221 @@
+ClrHome
+Output(1,1,"YOU:")
+Output(3,1,"CALC:")
+Output(8,1,"MONEY:")
+Output(8,8,M)
+Output(7,6,G)
+Output(7,1,"BET:")
+Output(3,7,"?")
+0->B
+0->C
+1->X
+0->Y
+0->E
+5->W
+0->V
+3->T
+0->H
+{5,2}->dim([H])
+Lbl 1
+While Y!=5
+	Y+1->Y
+	randInt(1,13)->A
+	A->[H](Y,X)
+End
+0->Y:X+1->X
+If X>2:Then
+	0->Y:Goto 19
+Else:Goto 1:End
+Lbl 19
+1->X
+0->Y
+Lbl 2
+1+Y->Y
+[H](Y,1)->A
+W+2->W
+If W=7
+Goto 14
+Lbl 16
+If A=1
+Output(T,W,"A")
+If A=2
+Output(T,W,"2")
+If A=3
+Output(T,W,"3")
+If A=4
+Output(T,W,"4")
+If A=5
+Output(T,W,"5")
+If A=6
+Output(T,W,"6")
+If A=7
+Output(T,W,"7")
+If A=8
+Output(T,W,"8")
+If A=9
+Output(T,W,"9")
+If A=10
+Output(T,W,"10")
+If A=11
+Output(T,W,"J")
+If A=12
+Output(T,W,"Q")
+If A=13
+Output(T,W,"K")
+If H=2
+Goto 15
+
+Lbl 14
+If A>=11:Then
+10->A:End
+A+B->B
+
+
+If Y=5 or B>=19
+Then:Goto 3:End
+randInt(1,2)->X
+If B<=15:Then
+Goto 2:End
+If 16<=B<=18 and X=2
+Then:Goto 3:End
+Goto 2
+Lbl 3:0->Y
+5->W
+1->T
+2->X
+Lbl 4
+If C>=21 or Y=5:Then:Goto 6:End
+getKey->K
+If K=95:Then
+Goto 5:End
+If K=105:Then
+Goto 6:End
+Goto 4
+Lbl 5
+Y+1->Y
+[H](Y,2)->A
+If 11<=A:Then
+10->A:End
+If A=1 and E=0
+Goto 8:End
+If A=1:1->V
+
+Goto 7
+Lbl 8
+Menu("ACE VALUE","1",9,"11",10)
+Lbl 9:1->F
+Goto 11
+Lbl 10:11->F
+Lbl 11
+1->E
+1->V
+Lbl 7
+If 1=A
+F->A
+A+C->C
+Lbl 12
+W+2->W
+
+If V=1:Then
+Output(T,W,"A"):Goto 13:End
+If A=1
+Output(T,W,"A")
+If A=2
+Output(T,W,"2")
+If A=3
+Output(T,W,"3")
+If A=4
+Output(T,W,"4")
+If A=5
+Output(T,W,"5")
+If A=6
+Output(T,W,"6")
+If A=7
+Output(T,W,"7")
+If A=8
+Output(T,W,"8")
+If A=9
+Output(T,W,"9")
+If A=10
+Output(T,W,"10")
+If A=11
+Output(T,W,"J")
+If A=12
+Output(T,W,"Q")
+If A=13
+Output(T,W,"K")
+Lbl 13
+0->V
+Goto 4
+Lbl 6
+[H](1,1)->A
+3->T
+2->H
+7->W
+Goto 16
+Lbl 15
+Pause 
+ClrHome
+randInt(15,22)->A
+Output(3,1,"DEALER:")
+Output(3,9,A)
+Output(2,1,"CALC:")
+Output(1,1,"YOU:")
+Output(2,7,B)
+Output(1,6,C)
+If C<=21 and C=B and C=A
+Then
+2->X:M+G->M:End
+
+If C<=21 and B<C and B<=21
+1->X
+If C<=21 and B>C and B<=21
+3->X
+If C>21
+3->X
+If C<=21 and 5=Y
+1->X
+If B>21 and C<=21
+1->X
+
+If C<=21 and A<C and A<=21
+1->Y
+If C<=21 and A>C and A<=21
+3->Y
+If A>21 and C<=21
+1->Y
+If X=1 and Y=1
+1->X
+If X=1 and A=C and C!=B
+Then
+	2->X
+G*1.5->M:End
+If X=1 and B=C and C!=A
+Then
+	2->X
+G*1.5->M:End
+If X=3 or Y=3
+3->X
+
+If X=1:3G+M->M
+If X=3:M-G->M
+Output(7,1,"BET:")
+Output(8,1,"MONEY:")
+Output(7,6,G)
+Output(8,8,M)
+getKey->K
+While K!=105
+	If X=1
+	Output(5,5,"YOU WIN")
+	If X=2
+	Output(5,7,"TIE")
+	If X=3
+	Output(5,5,"YOU LOSE")
+	getKey->K
+	For(A,1,80)
+	End
+	Output(5,5,"        ")
+	For(A,1,50)
+	End
+End
+Return
