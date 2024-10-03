@@ -1,0 +1,16 @@
+0->K
+ClrHome
+Lbl 1
+getKey->K
+If K=0
+Then
+	Goto 1
+Else
+	ClrHome
+	Goto 2
+End
+Goto 1
+Lbl 2
+Output(1,1,K)
+0->K
+Goto 1
