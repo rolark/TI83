@@ -1,0 +1,27 @@
+Lbl 1
+ClrHome
+randInt(1,10)->R
+Lbl 3
+ClrHome
+Input "GUESS",U
+If R=U
+Then
+	Goto 2
+End
+Disp "WRONG"
+Pause 
+Goto 3
+Lbl 2
+ClrHome
+Output(4,6,"YOU WIN")
+For(A,1,10)
+	For(B,1,100)
+	End
+	Output(4,5,"*")
+	Output(4,13," ")
+	For(B,1,100)
+	End
+	Output(4,5," "
+	Output(4,13,"*")
+End
+Goto 1
