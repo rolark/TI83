@@ -1,0 +1,50 @@
+0->X:1->Y
+ClrHome
+Disp "EQN SOLVA"
+Disp "ROLAND OSBORNE"
+Disp "COPYRIGHT 1998"
+Disp "----------------"
+Disp "PUT IN STAND FRM"
+Disp "READ LEFT-RIGHT"
+Disp "PUT 0 IF NO VAR"
+Pause 
+ClrHome
+Input "NUMBER OF VARS:",Z
+{Z,Z}->dim([H])
+{Z,1}->dim([I])
+For(theta,1,Z^^2,1)
+	ClrHome
+	Disp " "
+	Output(1,1,"COEFFICIENT:"
+	Output(1,13,theta)
+	Input A
+	1+X->X
+	If X>Z
+	Then
+		1+Y->Y
+		1->X
+	End
+	A->[H](Y,X)
+End
+1->Y
+For(theta,1,Z,1)
+	ClrHome
+	Disp " "
+	Output(1,1,"ENTER CONSTANT")
+	Output(1,16,theta)
+	Input A
+	A->[I](Y,1)
+	Y+1->Y
+End
+[H]^^-1*[I]->[J]
+ClrHome
+Disp " "
+Output(1,1,"ANSWERS:")
+0->Y
+For(theta,2,Z+1)
+	[J](theta-1,1)->A
+	Disp A>Frac
+	Output(theta,1,"VAR NUM")
+	Output(theta,8,theta-1)
+	Output(theta,9,":")
+End
