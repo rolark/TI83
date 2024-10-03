@@ -1,0 +1,25 @@
+ClrHome
+Disp "CRAMO RULO"
+Disp "COPYRIGHT 1998"
+Disp "ROLAND OSBORNE"
+Input "XCOF1:",X
+Input "XCOF2:",V
+Input "YCOF1:",Y
+Input "YCOF2:",Z
+Input "CONST1:",A
+Input "CONST2:",B
+XZ-VY->D
+"D OF X"
+XB-VA->C
+C/D->Q
+"D OF Y"
+AZ-BY->E
+E/D->P
+ClrHome
+Q->Y
+P->X
+Disp X>Frac
+Disp Y>Frac
+Output(8,1,"DETERMINANT:")
+Output(8,13,D)
+"RO"
