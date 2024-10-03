@@ -1,0 +1,23 @@
+ClrHome
+Menu("FAKE WHAT?","MEM CLEARED",M,"ALL CLEARED",A
+Lbl A
+Output(1,7,"Fill(
+Output(1,1,"DELETE:A
+Output(1,11," 
+Pause 
+Stop
+Lbl M
+Output(4,3,"sum(
+Output(4,5,"DeltaTbl
+Output(4,3,"sum(
+Output(4,3,"M
+Output(4,4,"[|e]
+Output(4,7,"[|c]
+Output(4,9,"[|e]
+Output(4,10,"[|a]
+Output(4,11,"[r]
+Output(4,12,"[|e]
+Output(4,13,"[|d]
+Output(4,1," 
+Output(4,2," 
+Output(4,6," 
