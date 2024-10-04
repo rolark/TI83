@@ -1,0 +1,38 @@
+ClrHome
+Output(4,4,"2ND DEGREE")
+Output(5,5,"EQUATION")
+Pause 
+ClrHome
+Output(4,3,"MAD GUITARIST")
+Output(5,4,"ENTERPRISES")
+Pause 
+ClrHome
+Input "A=",A
+Input "B=",B
+Input "C=",C
+(~B+sqrt(B^^2-4AC))/(2A)->X
+(~B-sqrt(B^^2-4AC))/(2A)->Z
+(C-(AB^^2))/(4A^^2)->K
+(~B/(2A))->H
+AxesOff
+Text(0,0,"A=",A)
+Text(12,0,"VERTEX  (",H,",",K,")")
+Text(24,0,"AXIS X=",H)
+Text(36,0,"X VALUES")
+Text(42,0,X)
+Text(48,0,Z)
+Pause 
+ClrHome
+Input "GRAPH(Y/N)",O
+If O=Y
+Then
+	ClrDraw
+	DelVar X
+	"(AX^^2+BX+C)"->{Y1}
+	AxesOn
+	Input 
+	Disp {Y1}
+	DelVar {Y1}
+	ClrHome
+End
+ClrDraw
