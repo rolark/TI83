@@ -1,0 +1,40 @@
+Disp "ENTER NUMBER OF"
+Disp "GRADES TO BE"
+Input "AVERAGED ",A
+Disp "ENTER GRADES"
+0->B:0->E:Repeat B>=A
+	Input C
+	E+C->E:C=0
+B+1->B:End
+E/A->D
+Disp D
+If D<69
+Disp "YOU ARE DUMB   F"
+If D>=69.5 and D<71.5
+Disp "              D-"
+If D>=71.5 and D<74.5
+Disp "               D"
+If D>=74.5 and D<76.5
+Disp "              D+"
+If D>=76.5 and D<78.5
+Disp "              C-"
+If D>=78.5 and D<83.5
+Disp "               C"
+If D>=83.5 and D<85.5
+Disp "              C+"
+If D>=85.5 and D<87.5
+Disp "              B-"
+If D>=87.5 and D<91.5
+Disp "               B"
+If D>=91.5 and D<93.5
+Disp "              B+"
+If D>=93.5 and D<95.5
+Disp "              A-"
+If D>=95.5 and D<98.5
+Disp "               A"
+If D>=98.5
+Disp "YOU R SMRT    A+"
+Disp "THIS PROGRAM WAS"
+Disp "CREATED BY:"
+Disp "CHRIS THOMPSON"
+Stop
